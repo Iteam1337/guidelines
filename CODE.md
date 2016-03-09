@@ -45,6 +45,19 @@ We are using Docker and Docker Cloud (previously Tutum) to support our entire de
 
 ### Development
 
+Each project starts out with a *docker-compose* yaml that describes the system and its dependencies. This is a huge advantage since it makes it possible for any developer to pull the code and run the application locally. The only requirement is to have docker installed and, when running the first time, the time it takes to download the necessary images.
+
+Since docker is used in both the development, testing and production phase of the development lifecycle, the docker-compose.yml is most likely equivalent, or very close to, the stack that describes the production environment in Docker Cloud. The gap between development and hosting/operations is very small thanks to Docker and the way we use it.
+
 ### Automatic builds/deployment
+
+Docker Cloud features a built-in system for triggering image builds when code is pushed to GitHub. We use this to have Docker Cloud produce new images automatically as we update our code. If an image build is successful, the resulting image is pushed to Docker Hub and tagged according to the branch the code came from (for example *develop*, or *master*, or *new-payment-solution*).
+
+Any service that uses a specific image (and a specific image tag) can be set to redeploy automatically when it detects a new image on Docker Hub. This is commonly used to fully automate the process of keeping coninuous development environments up-to-date.
+
+ 1. Code push
+ 2. Automatic build (and optional test run)
+ 3. Image push to Docker Hub
+ 4. Service restart (if service is set to "auto redeploy")
 
 ### DevOps
