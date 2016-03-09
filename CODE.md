@@ -18,7 +18,19 @@ Iteam gives its employees a lot of space to learn, explore and grow both within 
 
 ## Overview
 
-TODO: Graphics, development workflow
+### Simple development
+
+| Code push | Continous Integration build | Docker image push | Development service redeploy
+| ------------- | ------------- | ------------- | ------------- |
+| GitHub (develop) | Docker Cloud | Docker Cloud | Docker Cloud |
+
+### Development with strict feature branches
+
+| Code push | Code review + pull request | Continous Integration build | Docker image push | Development service redeploy
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| GitHub (feature branch) | GitHub (develop branch) | Docker Cloud | Docker Cloud | Docker Cloud |
+
+### Summary
 
 We are using Docker and Docker Cloud (previously Tutum) to support our entire development chain all the way up to production hosting.
 
