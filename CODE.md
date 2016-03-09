@@ -49,6 +49,8 @@ Each project starts out with a *docker-compose* yaml that describes the system a
 
 Since docker is used in both the development, testing and production phase of the development lifecycle, the docker-compose.yml is most likely equivalent, or very close to, the stack that describes the production environment in Docker Cloud. The gap between development and hosting/operations is very small thanks to Docker and the way we use it.
 
+Another advantage of this way of working is that projects and their lifecycles are described in, and bundled with, the source code.
+
 ### Automatic builds/deployment
 
 Docker Cloud features a built-in system for triggering image builds when code is pushed to GitHub. We use this to have Docker Cloud produce new images automatically as we update our code. If an image build is successful, the resulting image is pushed to Docker Hub and tagged according to the branch the code came from (for example *develop*, or *master*, or *new-payment-solution*).
