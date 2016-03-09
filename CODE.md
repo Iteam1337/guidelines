@@ -61,3 +61,5 @@ Any service that uses a specific image (and a specific image tag) can be set to 
  4. Service restart (if service is set to "auto redeploy")
 
 ### DevOps
+
+As Docker is used all the way from development to testing and production, each developer is acqainted with the way their projects are both built, configured and deployed. Thus, they are also quite familiar with the way the systems are supposed to be configured and setup in production.
