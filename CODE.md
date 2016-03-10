@@ -1,4 +1,4 @@
-# CODE
+# How we build code at Iteam
 
 ## Purpose
 
