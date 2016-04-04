@@ -24,10 +24,18 @@ iteam-se-web-prod
 iteam-se-rethinkdb-prod
 ```
 
-## Node tagging
+## Tagging
+
+### Nodes
 
 Nodes should have tags that describe their relevant properties and environment. For example *Amsterdam*, *Stockholm*, *Digital-Ocean*, *SSD*, *Fast-Storage*, *Redundant-Storage*
 
 The tags *on-premise* and *off-site* should be used to describe whether a node is physically located on the site of a customer (or our office) or if located in the cloud or similar shared locations.
 
 When it is necessary to keep environments separated, tags such as *Production* or *Development* should be used.
+
+### Services
+
+When deploying services, you should always plan ahead and use tags to make sure the containers will end up on the nodes intended for them.
+
+Simply deploying a service without any tags will make Docker Cloud deploy it on whichever node that is currently the emptiest one.
