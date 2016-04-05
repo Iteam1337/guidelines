@@ -55,7 +55,7 @@ Stacks should be named descriptively mentioning the project name and what part o
 
 Example:
 ```
-IteamSE
+IteamSE_prod
 IteamSE_dev
 ```
 
@@ -65,8 +65,8 @@ Every service should belong to a stack, orphaned services are a bit harder to ma
 
 For example, a stack called IteamSE might have these services:
 ```
-iteamse_web
-iteamse_rethinkdb
+iteamse_web_prod
+iteamse_rethinkdb_prod
 ```
 
 A stack called IteamAPI-dev might have these:
