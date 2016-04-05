@@ -4,10 +4,10 @@
 
 Here is a good stack file template.
 
-Let's say your stack is called *IteamAPI* and you are deploying a production stack.
+Let's say your stack is called *IteamAPI_production* and you are deploying a production stack.
 
 ```
-iteamapi_api_prod:
+iteamapi_api_production:
   expose:
     - '80'
   environment:
@@ -15,15 +15,17 @@ iteamapi_api_prod:
   deployment_strategy: 'high_availability'
   target_num_containers: 2
   links:
-    - 'rethinkdb:iteamapi_rethinkdb_prod'
-iteamapi_rethinkdb_prod:
+    - 'rethinkdb:iteamapi_rethinkdb_production'
+iteamapi_rethinkdb_production:
   deployment_strategy: 'high_availability'
   target_num_containers: 1
 ```
 
-## Versioning
+## Image versioning/tagging
 
-When using external images, always figure out which version you want. Do not simply use :latest as it might change over time and cause unexpected problems.
+When using external images, always figure out which version/tag you want. Do not simply use :latest as it might change over time and cause unexpected problems.
+
+When building your own images, make sure to use relevant tags such as *develop*, *test* or *production*.
 
 ## Deployment
 
@@ -41,7 +43,7 @@ Used for production containers, Docker Cloud will make sure these are always up.
 
 Used for proxies and such helper containers.
 
-### Container count
+### Container availability
 
 #### target_num_containers
 
