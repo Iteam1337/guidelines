@@ -64,6 +64,8 @@ iteamapi_api_rethinkdb_dev
 
 ## Deployment
 
+Development and test services should have *autoredeploy: true* so that they recycle each time a new image is pushed to the registry.
+
 ### Container availability
 
 #### target_num_containers
@@ -99,3 +101,16 @@ When it is necessary to keep environments separated, tags such as *Production* o
 When deploying services, you should always plan ahead and use tags to make sure the containers will end up on the nodes intended for them.
 
 Simply deploying a service without any tags will make Docker Cloud deploy it on whichever node that is currently the emptiest one.
+
+## Builds
+
+### Tagging
+
+```
+Git branch  | Image tag
+------------|----------
+develop     | develop
+feature/xyz | develop
+test        | test
+master      | production
+```
