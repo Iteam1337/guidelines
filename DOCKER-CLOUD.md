@@ -57,25 +57,25 @@ iteamapi_api_rethinkdb_dev
 
 ## Deployment
 
-### Strategy
-
-#### emptiest_node
-
-Used for test/dev
-
-#### High availability
-
-Used for production containers, Docker Cloud will make sure these are always up.
-
-#### every_node
-
-Used for proxies and such helper containers.
-
 ### Container availability
 
 #### target_num_containers
 
 Always make sure you set this attribute so that it is present in the stack file right from the start.
+
+### Strategy
+
+#### emptiest_node
+
+Use for test/dev - will deploy the desired number of containers to whatever nodes that are currently most available.
+
+#### High availability
+
+Use for production containers, Docker Cloud will make sure these are always up.
+
+#### every_node
+
+Used for proxies and such helper containers.
 
 ## Tagging
 
