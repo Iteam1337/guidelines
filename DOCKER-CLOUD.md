@@ -1,5 +1,26 @@
 # Docker Cloud
 
+## TL;DR;
+
+Here is a good stack file template.
+
+Let's say your stack is called *IteamAPI* and you are deploying a production stack.
+
+```
+iteamapi_api_prod:
+  expose:
+    - '80'
+  environment:
+    - 'VIRTUAL_HOST=http://api.iteam.se'
+  deployment_strategy: 'high_availability'
+  target_num_containers: 2
+  links:
+    - 'rethinkdb:iteamapi_rethinkdb_prod'
+iteamapi_rethinkdb_prod:
+  deployment_strategy: 'high_availability'
+  target_num_containers: 1
+```
+
 ## Versioning
 
 When using external images, always figure out which version you want. Do not simply use :latest as it might change over time and cause unexpected problems.
