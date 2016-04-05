@@ -27,28 +27,6 @@ When using external images, always figure out which version/tag you want. Do not
 
 When building your own images, make sure to use relevant tags such as *develop*, *test* or *production*.
 
-## Deployment
-
-### Strategy
-
-#### emptiest_node
-
-Used for test/dev
-
-#### High availability
-
-Used for production containers, Docker Cloud will make sure these are always up.
-
-#### every_node
-
-Used for proxies and such helper containers.
-
-### Container availability
-
-#### target_num_containers
-
-Always make sure you set this attribute so that it is present in the stack file right from the start.
-
 ## Naming
 
 ### Stacks
@@ -77,6 +55,27 @@ iteamapi_api_dev
 iteamapi_api_rethinkdb_dev
 ```
 
+## Deployment
+
+### Strategy
+
+#### emptiest_node
+
+Used for test/dev
+
+#### High availability
+
+Used for production containers, Docker Cloud will make sure these are always up.
+
+#### every_node
+
+Used for proxies and such helper containers.
+
+### Container availability
+
+#### target_num_containers
+
+Always make sure you set this attribute so that it is present in the stack file right from the start.
 
 ## Tagging
 
