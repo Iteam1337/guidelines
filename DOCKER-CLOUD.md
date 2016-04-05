@@ -1,5 +1,9 @@
 # Docker Cloud
 
+## Versioning
+
+When using external images, always figure out which version you want. Do not simply use :latest as it might change over time and cause unexpected problems.
+
 ## Naming
 
 ### Stacks
