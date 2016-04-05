@@ -4,6 +4,24 @@
 
 When using external images, always figure out which version you want. Do not simply use :latest as it might change over time and cause unexpected problems.
 
+## Deployment strategy
+
+### emptiest_node
+
+Used for test/dev
+
+### High availability
+
+Used for production containers, Docker Cloud will make sure these are always up.
+
+### every_node
+
+Used for proxies and such helper containers.
+
+### target_num_containers
+
+Always make sure you set this attribute so that it is present in the stack file right from the start.
+
 ## Naming
 
 ### Stacks
