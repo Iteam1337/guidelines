@@ -16,9 +16,16 @@ iteamapi_api_production:
   target_num_containers: 2
   links:
     - 'rethinkdb:iteamapi_rethinkdb_production'
+  tags:
+    - off-site
+    - production
 iteamapi_rethinkdb_production:
   deployment_strategy: 'high_availability'
   target_num_containers: 1
+  tags:
+    - on-premise
+    - production
+    - ssd
 ```
 
 ## Image versioning/tagging
