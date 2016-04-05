@@ -88,7 +88,7 @@ Used for proxies and such helper containers.
 
 ### Nodes
 
-Nodes should have tags that describe their relevant properties and environment. For example *Amsterdam*, *Stockholm*, *Digital-Ocean*, *SSD*, *Fast-Storage*, *Redundant-Storage*
+Nodes should have tags that describe their relevant properties and environment. For example *amsterdam*, *stockholm*, *digitalocean*, *ssd*, *redundantstorage*
 
 The tags *on-premise* and *off-site* should be used to describe whether a node is physically located on the site of a customer (or our office) or if located in the cloud or similar shared locations.
 
