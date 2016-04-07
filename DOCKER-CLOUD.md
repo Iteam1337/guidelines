@@ -4,7 +4,7 @@
 
 Here is a good stack file template.
 
-Let's say your stack is called *IteamAPI_production* and you are deploying a production stack.
+Let's say your stack is called *IteamAPI-production* and you are deploying a production stack.
 
 ```
 iteamapi_api_production:
@@ -42,8 +42,8 @@ Stacks should be named descriptively mentioning the project name and what part o
 
 Example:
 ```
-IteamSE_prod
-IteamSE_dev
+IteamSE-production
+IteamSE-develop
 ```
 
 ### Services
@@ -52,14 +52,14 @@ Every service should belong to a stack, orphaned services are a bit harder to ma
 
 For example, a stack called IteamSE might have these services:
 ```
-iteamse_web_prod
-iteamse_rethinkdb_prod
+iteamse_web_production
+iteamse_rethinkdb_production
 ```
 
 A stack called IteamAPI-dev might have these:
 ```
-iteamapi_api_dev
-iteamapi_api_rethinkdb_dev
+iteamapi_api_develop
+iteamapi_api_rethinkdb_develop
 ```
 
 ## Deployment
