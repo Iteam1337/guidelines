@@ -1,2 +1,2 @@
 # guidelines
-Code, UI and UX development guidelines at Iteam
+Code, DevOps, UI and UX development guidelines at Iteam
