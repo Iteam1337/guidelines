@@ -7,7 +7,7 @@ Here is a good stack file template.
 Let's say your stack is called *IteamAPI-production* and you are deploying a production stack.
 
 ```
-iteamapi_api_production:
+iteamapi-api-production:
   expose:
     - '80'
   environment:
@@ -15,11 +15,11 @@ iteamapi_api_production:
   deployment_strategy: 'high_availability'
   target_num_containers: 2
   links:
-    - 'rethinkdb:iteamapi_rethinkdb_production'
+    - 'rethinkdb:iteamapi-rethinkdb-production'
   tags:
     - off-site
     - production
-iteamapi_rethinkdb_production:
+iteamapi-rethinkdb-production:
   deployment_strategy: 'high_availability'
   target_num_containers: 1
   tags:
@@ -52,14 +52,14 @@ Every service should belong to a stack, orphaned services are a bit harder to ma
 
 For example, a stack called IteamSE might have these services:
 ```
-iteamse_web_production
-iteamse_rethinkdb_production
+iteamse-web-production
+iteamse-rethinkdb-production
 ```
 
 A stack called IteamAPI-dev might have these:
 ```
-iteamapi_api_develop
-iteamapi_api_rethinkdb_develop
+iteamapi-api-develop
+iteamapi-api-rethinkdb-develop
 ```
 
 ## Deployment
