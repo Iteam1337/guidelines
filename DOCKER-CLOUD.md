@@ -48,7 +48,7 @@ IteamSE-develop
 
 ### Services
 
-Every service should belong to a stack, orphaned services are a bit harder to manage on accounts with a large amount of services. We use underscores to separate words. Servies should be named descriptive, mentioning the stack, development cycle and what they are.
+Every service should belong to a stack, orphaned services are a bit harder to manage on accounts with a large amount of services. We use hyphens (-) to separate words. Servies should be named descriptive, mentioning the stack, development cycle and what they are.
 
 For example, a stack called IteamSE might have these services:
 ```
