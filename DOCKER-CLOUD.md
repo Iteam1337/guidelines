@@ -15,7 +15,7 @@ IteamAPI-api-production:
   deployment_strategy: 'high_availability'
   target_num_containers: 2
   links:
-    - 'rethinkdb:IteamAPI-rethinkdb-production'
+    - 'IteamAPI-rethinkdb-production:rethinkdb'
   tags:
     - off-site
     - production
