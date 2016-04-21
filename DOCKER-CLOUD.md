@@ -62,6 +62,14 @@ IteamSE-api-develop
 IteamSE-api-rethinkdb-develop
 ```
 
+### Volumes
+
+Data volume naming on the host
+
+```
+/data/<production|develop>/<stack>/<service>
+```
+
 ## Deployment
 
 Development and test services should have *autoredeploy: true* so that they recycle each time a new image is pushed to the registry.
