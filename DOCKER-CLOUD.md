@@ -26,6 +26,8 @@ IteamAPI-rethinkdb-production:
     - on-premise
     - production
     - ssd
+  volumes:
+    - /data/iteamapi_production/rethinkdb:/var/rethinkdb:
 ```
 
 ## Image versioning/tagging
